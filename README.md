@@ -2,6 +2,8 @@
 
 A short diagnostic that turns a wary board member into a qualified booking for a one-to-one AI governance check-up. Landing page → 8-question flow → personalised result at `/preview/[token]` → book or waitlist.
 
+Live link - https://ai-wake-up-call-page-p1cb.vercel.app/
+
 ## Setup
 
 ```bash
