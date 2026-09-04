@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f8f8f7;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f1ee;
+  --color-border: #e2e0d8;
+  --color-ink: #22231a;
+  --color-ink-muted: #5b5c50;
+  --color-ink-faint: #85867a;
+
+  /* Brand accent — a monochromatic system built from the user's purple
+     swatch (#7365a6), replacing the old sage-green accent entirely. Strong
+     and tint are shades of this same hue, not other palette swatches, so a
+     single button's states read as one colour rather than three. */
+  --color-accent: #7365a6;
+  --color-accent-strong: #5c5185;
+  --color-accent-tint: #eae8f2;
+
+  --color-palette-1: #f5b0f0;
+  --color-palette-2: #7365a6;
+  --color-palette-3: #6d6f8c;
+  --color-palette-4: #f2ccb6;
+  --color-palette-5: #bf8d7a;
+
+  --color-plum: #9a65a4;
+  --color-plum-tint: #f4ecf5;
+
+  --color-red: #a5624f;
+  --color-red-tint: #f6ece8;
+
+  --font-head: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-head);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Native <button> elements don't get a pointer cursor by default (only <a>
+   does) — without this, clickable buttons like the quiz's answer cards look
+   inert on hover instead of giving the same "this is clickable" cue a link
+   gives. */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
